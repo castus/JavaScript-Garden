@@ -26,13 +26,13 @@ jak obiekt.
 
 ### Obiekty jako typy danych
 
-Obiekty w języku JavaScript mogą być używana jako [*tablice asocjacyjne*][1]. 
-Ponieważ obiekty głównie składają się z mapowań pomiędzy nazwanymi właściwościami (kluczami)
+Obiekty w języku JavaScript mogą być używane jako [*tablice asocjacyjne*][1], 
+ponieważ obiekty głównie składają się z mapowań pomiędzy nazwanymi właściwościami (kluczami)
 a wartościami dla tych atrybutów.
 
-Używając literału obiektu - notacji `{}` - istnieje możliwość stworzenie obiektu prostego.
+Używając literału obiektu - notacji `{}` - istnieje możliwość stworzenia obiektu prostego.
 Ten nowy obiekt bedzie [dziedziczył](#object.prototype) z `Object.prototype` oraz 
-nie bedzie posiadał żadnych [własnych właściwości](#object.hasownproperty) zdefiniowanych w sobie.
+nie będzie posiadał żadnych [własnych właściwości](#object.hasownproperty) zdefiniowanych w sobie.
 
     var foo = {}; // nowy pusty obiekt
 
@@ -55,7 +55,7 @@ lub notacje z nawiasami kwadratowymi.
     foo['1234']; // działa, zwraca undefined
 
 Obie notacje są identyczne w swoim działaniu, z tą tylko różnicą że notacja z nawiasami 
-kwadratowymi pozwala na dynamiczne dodawanie właściwości i nie prowadzi do wyrzycenia
+kwadratowymi pozwala na dynamiczne dodawanie właściwości i nie prowadzi do "wyrzucenia"
 błędu podczas odczytu nieistniejącej właściwości.
 
 ### Usuwanie właściwości
@@ -89,10 +89,10 @@ została usunięta i dlatego nie została wypisana.
         delete: 'I am a keyword too so me' // wyrzuca błąd SyntaxError
     };
 
-Nazwy właściwości obiektu mogą być zarówno zapisane jako tekst(bez cudzysłowów 
-lub apostrofów) lub jako string (w cudzisłowach lub apostrofach). 
+Nazwy właściwości obiektu mogą być zarówno zapisane jako tekst (bez cudzysłowów 
+lub apostrofów) lub jako string (w cudzysłowach lub apostrofach). 
 Ze względu na kolejne niedociągnięcie w parserze JavaScript
-powyższy kod wyrzuci błąd `SyntaxError` dla implementacji JavaScript ponizej ECMAScript 5.
+powyższy kod "wyrzuci" błąd `SyntaxError` dla implementacji JavaScript poniżej ECMAScript 5.
 
 Ten błąd wynika z faktu, że `delete` jest *słowem kluczowym*, dlatego musi zostać 
 zapisany jako *string* (z cudzysłowami lub apostrofami), aby zapewnić, że zostanie 
